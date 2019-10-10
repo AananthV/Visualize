@@ -228,6 +228,7 @@ public class MainActivity extends AppCompatActivity
 
     private Point getScreenCenter() {
         View view = findViewById(R.id.content);
+
         return new Point(view.getWidth() / 2, view.getHeight() / 2);
     }
 
