@@ -48,4 +48,7 @@ dependencies {
 
     // Sceneform asset loader
     implementation 'com.google.ar.sceneform:assets:1.12.0'
+
+    // Floating Action Button
+    implementation 'com.google.android.material:material:1.0.0'
 }

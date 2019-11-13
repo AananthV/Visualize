@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.visualize">
-    <!-- Both "AR Optional" and "AR Required" apps require CAMERA permission. -->
+    <!-- Sceneform requires OpenGL ES 3.0 or later. -->
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -9,9 +9,11 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
+        <activity android:name=".ARActivity"></activity>
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
+
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
@@ -24,8 +26,7 @@
         <meta-data
             android:name="com.google.ar.core"
             android:value="required" />
-    </application> <!-- Sceneform requires OpenGL ES 3.0 or later. -->
-    <uses-feature android:name="android.hardware.camera.ar" />
+    </application>
     <!--
          Indicates that app requires ARCore ("AR Required"). Ensures the app is
          visible only in the Google Play Store on devices that support ARCore.
@@ -34,6 +35,8 @@
     <uses-feature
         android:glEsVersion="0x00030000"
         android:required="true" />
+
+    <uses-feature android:name="android.hardware.camera.ar" />
 
     <uses-permission android:name="android.permission.CAMERA" />
 
